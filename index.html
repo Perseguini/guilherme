@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perseguini</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav class="sidebar__navigation">
+            <div class="logo">
+                <a href="">
+                    <img src="./assets/icons/logogui.png" alt="Logo" />
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="images/inicio.png" width="30" height="22" />
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/marcosguilhermeperseguini/">
+                        <img src="images/insta.png" width="25" height="25" />
+                        <span>Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="library">
+            <div class="library__content">
+                <img src="images/down.png" width="30" height="30">
+                    <span>Downloads</span>
+                </button>
+            </div>
+           
+
+            <section class="hero is-success is-fullheight">
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <div class="column is-4 is-offset-4">
+                            <h3 class="title has-text-grey">Login</h3>
+                        
+                            <?php
+                            if(isset($_SESSION['nao_autenticado'])):
+                            ?>
+                          
+                            <?php
+                            endif;
+                            unset($_SESSION['nao_autenticado']);
+                            ?>
+                            <div class="box">
+                                <form action="login.php" method="POST">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input name="usuario" name="text" class="input is-large" placeholder="Seu usuário" autofocus="">
+                                        </div>
+                                    </div>
+        
+                                    <div class="field">
+                                        <div class="control">
+                                            <input name="senha" class="input is-large" type="password" placeholder="Sua senha">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
+                                </form>
+                                </div>
+
+            
+        </div>
+    </div>    
+</body>
+
+</html>
